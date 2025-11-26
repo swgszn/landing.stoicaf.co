@@ -131,22 +131,30 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        {/* Marble + Radial Gradient Background */}
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Radial gradient - Navy center to transparent */}
-          <div className="absolute inset-0 bg-gradient-radial from-slate-900/10 via-transparent to-transparent"></div>
-          {/* Marble texture overlay - super faint */}
-          <div className="absolute inset-0 opacity-[0.06]" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231E293B' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '30px 30px'
-          }}></div>
-        </div>
+      <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-white">
+        {/* Subtle Marble Texture Background */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231E293B' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundSize: '40px 40px'
+        }}></div>
 
-        <div className="max-w-7xl mx-auto relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left: Content */}
-            <div className="fade-in-up">
+        <div className="max-w-8xl mx-auto relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Stoic AF Bust Mascot */}
+            <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
+              <div className="relative" style={{
+                filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08))'
+              }}>
+                <img
+                  src="/images/marble_bust.png"
+                  alt="Stoic AF Marble Bust"
+                  className="w-full max-w-md lg:max-w-lg"
+                />
+              </div>
+            </div>
+
+            {/* Right: Content */}
+            <div className="fade-in-up order-1 lg:order-2">
               <div className="inline-block mb-6 px-4 py-2 bg-stoic-blue/10 rounded-full">
                 <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
                   Ancient Wisdom, Modern Application
@@ -193,19 +201,6 @@ export default function Home() {
                   <Check className="text-green-600" size={20} />
                   <span>Build Real Discipline</span>
                 </div>
-              </div>
-            </div>
-
-            {/* Right: Stoic AF Bust Mascot */}
-            <div className="relative flex justify-center lg:justify-end">
-              <div className="relative" style={{
-                filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1))'
-              }}>
-                <img
-                  src="/images/marble_bust.png"
-                  alt="Stoic AF Marble Bust"
-                  className="w-full max-w-md lg:max-w-lg animate-float"
-                />
               </div>
             </div>
           </div>

@@ -118,10 +118,10 @@ export default function Layout({ children }: LayoutProps) {
             <div>
               <h3 className="text-white font-bold uppercase tracking-wider text-sm mb-4">Company</h3>
               <ul className="space-y-2 text-sm">
-                <li><Link to="/about" className="hover:text-stoic-blue transition-colors">About</Link></li>
-                <li><Link to="/contact" className="hover:text-stoic-blue transition-colors">Contact</Link></li>
-                <li><Link to="/privacy" className="hover:text-stoic-blue transition-colors">Privacy Policy</Link></li>
-                <li><Link to="/terms" className="hover:text-stoic-blue transition-colors">Terms of Service</Link></li>
+                <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-stoic-blue transition-colors">About</Link></li>
+                <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-stoic-blue transition-colors">Contact</Link></li>
+                <li><Link to="/privacy" onClick={() => window.scrollTo(0, 0)} className="hover:text-stoic-blue transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms" onClick={() => window.scrollTo(0, 0)} className="hover:text-stoic-blue transition-colors">Terms of Service</Link></li>
               </ul>
             </div>
           </div>
