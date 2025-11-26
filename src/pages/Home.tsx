@@ -326,8 +326,20 @@ export default function Home() {
                 <img
                   src="/images/book.png"
                   alt="Stoic AF Book"
-                  className="w-full h-auto object-contain"
+                  className="w-full h-[600px] object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end">
+                  <div className="p-8 text-white">
+                    <BookOpen className="mb-4" size={48} />
+                    <h3 className="text-4xl font-black mb-2">STOIC AF</h3>
+                    <p className="text-xl font-semibold mb-4">The Millennial Bro's Guide to Stoicism</p>
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="text-yellow-400 fill-yellow-400" size={20} />
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
