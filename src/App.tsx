@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {
   Menu, X, BookOpen, Smartphone, ShoppingBag,
   ArrowRight, Check, Star, Twitter, Instagram,
-  Mail, ChevronDown
+  Mail, ChevronDown, Calendar, Clock
 } from 'lucide-react';
 
 function App() {
@@ -162,6 +162,103 @@ function App() {
               <div className="text-4xl font-black text-stoic-blue mb-2">500+</div>
               <div className="text-slate-400 font-semibold">Five-Star Reviews</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Blog Articles */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-block mb-4 px-4 py-2 bg-stoic-blue/10 rounded-full">
+              <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
+                From The Blog
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
+              Latest Stoic <span className="gradient-text">Insights</span>
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Weekly wisdom on building discipline, conquering anxiety, and living with purpose.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+            {[
+              {
+                title: 'How to Think Like a Stoic in 2025',
+                excerpt: 'Ancient philosophy meets modern challenges. Learn the core principles that made Marcus Aurelius unshakeable.',
+                category: 'Philosophy',
+                readTime: '8 min',
+                date: 'Nov 20, 2025',
+                image: 'https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=800&q=80'
+              },
+              {
+                title: 'The Dichotomy Journal: Control What You Can',
+                excerpt: 'A daily practice to separate what you control from what you don\'t. Transform anxiety into action.',
+                category: 'Journaling',
+                readTime: '6 min',
+                date: 'Nov 18, 2025',
+                image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80'
+              },
+              {
+                title: 'Why Discipline Beats Motivation Every Time',
+                excerpt: 'Motivation is a lie. Discipline is freedom. Here\'s how to build systems that work when you don\'t feel like it.',
+                category: 'Discipline',
+                readTime: '10 min',
+                date: 'Nov 15, 2025',
+                image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80'
+              }
+            ].map((article, i) => (
+              <a
+                key={i}
+                href="https://blog.stoicaf.co"
+                className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-stoic-blue"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 left-4 bg-stoic-blue text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
+                    {article.category}
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-4 text-xs text-slate-500 mb-3">
+                    <div className="flex items-center gap-1">
+                      <Calendar size={14} />
+                      <span>{article.date}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock size={14} />
+                      <span>{article.readTime} read</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-stoic-blue transition-colors">
+                    {article.title}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed mb-4">
+                    {article.excerpt}
+                  </p>
+                  <div className="flex items-center gap-2 text-stoic-blue font-semibold text-sm group-hover:gap-3 transition-all">
+                    Read Article
+                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a
+              href="https://blog.stoicaf.co"
+              className="inline-flex items-center gap-2 border-2 border-stoic-blue text-stoic-blue hover:bg-stoic-blue hover:text-white px-8 py-4 rounded-lg text-lg font-bold transition-all"
+            >
+              View All Articles
+              <ArrowRight size={20} />
+            </a>
           </div>
         </div>
       </section>
