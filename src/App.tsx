@@ -95,7 +95,7 @@ function App() {
 
             <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
               Master Your Mind.<br />
-              <span className="gradient-text">Own Your Life.</span>
+              <span className="text-stoic-blue">Own Your Life.</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
@@ -146,23 +146,13 @@ function App() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-12 bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-black text-stoic-blue mb-2">10K+</div>
-              <div className="text-slate-400 font-semibold">Readers Taking Action</div>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-stoic-blue mb-2">4.8★</div>
-              <div className="text-slate-400 font-semibold">Average Rating</div>
-            </div>
-            <div>
-              <div className="text-4xl font-black text-stoic-blue mb-2">500+</div>
-              <div className="text-slate-400 font-semibold">Five-Star Reviews</div>
-            </div>
-          </div>
+      {/* Divider */}
+      <section className="py-16 bg-slate-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <blockquote className="text-2xl md:text-3xl font-serif italic text-slate-300 leading-relaxed">
+            "You have power over your mind—not outside events. Realize this, and you will find strength."
+          </blockquote>
+          <p className="mt-4 text-stoic-blue font-bold text-lg">— Marcus Aurelius</p>
         </div>
       </section>
 
@@ -176,7 +166,7 @@ function App() {
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
-              Latest Stoic <span className="gradient-text">Insights</span>
+              Latest Stoic <span className="text-stoic-blue">Insights</span>
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Weekly wisdom on building discipline, conquering anxiety, and living with purpose.
@@ -299,7 +289,7 @@ function App() {
               </div>
 
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
-                Your Playbook for <span className="gradient-text">Unshakeable Calm</span>
+                Your Playbook for <span className="text-stoic-blue">Unshakeable Calm</span>
               </h2>
 
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
@@ -352,7 +342,7 @@ function App() {
               </div>
 
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
-                Your Daily <span className="gradient-text">Stoic Practice</span>
+                Your Daily <span className="text-stoic-blue">Stoic Practice</span>
               </h2>
 
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
@@ -432,7 +422,7 @@ function App() {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
-            Wear the <span className="gradient-text">Mindset</span>
+            Wear the <span className="text-stoic-blue">Mindset</span>
           </h2>
 
           <p className="text-lg text-slate-600 mb-12 max-w-2xl mx-auto">
