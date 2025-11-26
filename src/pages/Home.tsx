@@ -131,8 +131,8 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: 'rgba(75, 144, 200, 0.02)' }}>
-        <div className="max-w-8xl mx-auto relative" style={{ width: '92%' }}>
+      <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-12" style={{ backgroundColor: 'rgba(75, 144, 200, 0.02)' }}>
+        <div className="max-w-7xl mx-auto relative" style={{ width: '85%' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Stoic AF Bust Mascot */}
             <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
@@ -220,7 +220,7 @@ export default function Home() {
       </section>
 
       {/* Featured Blog Articles */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-24 px-4 sm:px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block mb-4 px-4 py-2 bg-stoic-blue/10 rounded-full">
@@ -317,29 +317,17 @@ export default function Home() {
       </section>
 
       {/* The Book Section */}
-      <section id="book" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
+      <section id="book" className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Book Image/Mockup */}
             <div className="relative">
               <div className="relative rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
                 <img
-                  src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&q=80"
-                  alt="Book mockup"
-                  className="w-full h-[600px] object-cover"
+                  src="/images/book.png"
+                  alt="Stoic AF Book"
+                  className="w-full h-auto object-contain"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end">
-                  <div className="p-8 text-white">
-                    <BookOpen className="mb-4" size={48} />
-                    <h3 className="text-4xl font-black mb-2">STOIC AF</h3>
-                    <p className="text-xl font-semibold mb-4">The Millennial Bro's Guide to Stoicism</p>
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="text-yellow-400 fill-yellow-400" size={20} />
-                      ))}
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -393,7 +381,7 @@ export default function Home() {
       </section>
 
       {/* The App Section */}
-      <section id="app" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="app" className="py-24 px-4 sm:px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* App Description - Left Side */}
@@ -476,7 +464,7 @@ export default function Home() {
       </section>
 
       {/* Merch Section */}
-      <section id="merch" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50">
+      <section id="merch" className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-50">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-block mb-4 px-4 py-2 bg-stoic-blue/10 rounded-full">
             <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
@@ -531,7 +519,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section className="py-24 px-4 sm:px-6 lg:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-4">
@@ -578,7 +566,7 @@ export default function Home() {
       </section>
 
       {/* Newsletter CTA */}
-      <section id="newsletter" className="py-24 px-4 sm:px-6 lg:px-8 bg-stoic-blue">
+      <section id="newsletter" className="py-24 px-4 sm:px-6 lg:px-12 bg-stoic-blue">
         <div className="max-w-4xl mx-auto text-center">
           <Mail className="text-white mx-auto mb-6" size={64} />
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
