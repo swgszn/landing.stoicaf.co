@@ -3,6 +3,14 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
+# Accept build arguments
+ARG VITE_CONVERTKIT_FORM_ID
+ARG VITE_CONVERTKIT_API_KEY
+
+# Set as environment variables for Vite build
+ENV VITE_CONVERTKIT_FORM_ID=$VITE_CONVERTKIT_FORM_ID
+ENV VITE_CONVERTKIT_API_KEY=$VITE_CONVERTKIT_API_KEY
+
 # Copy package files
 COPY package*.json ./
 
@@ -12,7 +20,7 @@ RUN npm ci
 # Copy source code
 COPY . .
 
-# Build the app
+# Build the app (Vite will read the ENV vars)
 RUN npm run build
 
 # Production stage
