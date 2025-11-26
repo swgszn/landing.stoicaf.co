@@ -131,13 +131,13 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-12" style={{ backgroundColor: 'rgba(75, 144, 200, 0.02)' }}>
+      <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-12 bg-slate-900">
         <div className="mx-auto relative" style={{ width: '85%', maxWidth: '1280px' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Stoic AF Bust Mascot */}
             <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
               <div className="relative" style={{
-                filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.08))'
+                filter: 'drop-shadow(0 12px 24px rgba(75, 144, 200, 0.15))'
               }}>
                 <img
                   src="/images/marble_bust.png"
@@ -149,18 +149,18 @@ export default function Home() {
 
             {/* Right: Content */}
             <div className="fade-in-up order-1 lg:order-2">
-              <div className="inline-block mb-6 px-4 py-2 bg-stoic-blue/10 rounded-full">
+              <div className="inline-block mb-6 px-4 py-2 bg-stoic-blue/20 rounded-full">
                 <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
                   Ancient Wisdom, Modern Application
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
+              <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight mb-6 leading-tight">
                 Master Your Mind.<br />
                 <span className="text-stoic-blue">Own Your Life.</span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed">
+              <p className="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed">
                 Stoicism isn't just philosophy—it's the operating system for a meaningful life.
                 Learn to control what you can, let go of what you can't, and build unshakeable discipline.
               </p>
@@ -168,27 +168,27 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="#book"
-                  className="bg-stoic-blue hover:bg-sky-600 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
+                  className="bg-stoic-blue hover:bg-sky-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
                 >
                   Get the Book
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                 </a>
                 <a
                   href="#app"
-                  className="border-2 border-slate-300 hover:border-stoic-blue text-slate-800 hover:text-stoic-blue px-8 py-4 rounded-lg text-lg font-bold transition-all flex items-center justify-center gap-2"
+                  className="border-2 border-slate-600 hover:border-stoic-blue text-slate-200 hover:text-stoic-blue px-8 py-4 rounded-lg text-lg font-bold transition-all flex items-center justify-center gap-2"
                 >
                   <Smartphone size={20} />
                   Try the App
                 </a>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-6 text-sm text-slate-500">
+              <div className="mt-8 flex flex-wrap gap-6 text-sm text-slate-400">
                 <div className="flex items-center gap-2">
-                  <Check className="text-green-600" size={20} />
+                  <Check className="text-stoic-blue" size={20} />
                   <span>No BS, Just Philosophy</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="text-green-600" size={20} />
+                  <Check className="text-stoic-blue" size={20} />
                   <span>Practical Daily Tools</span>
                 </div>
                 <div className="flex items-center gap-2">
