@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Twitter, Instagram, Mail } from 'lucide-react';
+import Logo from './Logo';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -16,9 +17,7 @@ export default function Layout({ children }: LayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-stoic-blue rounded flex items-center justify-center text-white">
-                <span className="font-bold text-lg">S</span>
-              </div>
+              <Logo className="w-8 h-8" />
               <span className="text-xl font-extrabold tracking-tight text-slate-900">
                 STOIC AF
               </span>
@@ -86,9 +85,7 @@ export default function Layout({ children }: LayoutProps) {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-6 h-6 bg-stoic-blue rounded flex items-center justify-center text-white text-xs">
-                  <span className="font-bold">S</span>
-                </div>
+                <Logo className="w-6 h-6" />
                 <span className="text-lg font-bold text-white">STOIC AF</span>
               </div>
               <p className="text-sm text-slate-400 max-w-md leading-relaxed mb-6">

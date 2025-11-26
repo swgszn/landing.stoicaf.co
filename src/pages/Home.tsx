@@ -5,6 +5,7 @@ import {
   ArrowRight, Check, Star, Twitter, Instagram,
   Mail, ChevronDown, Calendar, Clock
 } from 'lucide-react';
+import Logo from '../components/Logo';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,9 +73,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-stoic-blue rounded flex items-center justify-center text-white">
-                <span className="font-bold text-lg">S</span>
-              </div>
+              <Logo className="w-8 h-8" />
               <span className="text-xl font-extrabold tracking-tight text-slate-900">
                 STOIC AF
               </span>
@@ -132,54 +131,81 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="hero-pattern pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-4xl mx-auto fade-in-up">
-            <div className="inline-block mb-6 px-4 py-2 bg-stoic-blue/10 rounded-full">
-              <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
-                Ancient Wisdom, Modern Application
-              </span>
+      <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        {/* Marble + Radial Gradient Background */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Radial gradient - Navy center to transparent */}
+          <div className="absolute inset-0 bg-gradient-radial from-slate-900/10 via-transparent to-transparent"></div>
+          {/* Marble texture overlay - super faint */}
+          <div className="absolute inset-0 opacity-[0.06]" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231E293B' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '30px 30px'
+          }}></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto relative">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <div className="fade-in-up">
+              <div className="inline-block mb-6 px-4 py-2 bg-stoic-blue/10 rounded-full">
+                <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
+                  Ancient Wisdom, Modern Application
+                </span>
+              </div>
+
+              <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
+                Master Your Mind.<br />
+                <span className="text-stoic-blue">Own Your Life.</span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed">
+                Stoicism isn't just philosophy—it's the operating system for a meaningful life.
+                Learn to control what you can, let go of what you can't, and build unshakeable discipline.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="#book"
+                  className="bg-stoic-blue hover:bg-sky-600 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
+                >
+                  Get the Book
+                  <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
+                </a>
+                <a
+                  href="#app"
+                  className="border-2 border-slate-300 hover:border-stoic-blue text-slate-800 hover:text-stoic-blue px-8 py-4 rounded-lg text-lg font-bold transition-all flex items-center justify-center gap-2"
+                >
+                  <Smartphone size={20} />
+                  Try the App
+                </a>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-6 text-sm text-slate-500">
+                <div className="flex items-center gap-2">
+                  <Check className="text-green-600" size={20} />
+                  <span>No BS, Just Philosophy</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="text-green-600" size={20} />
+                  <span>Practical Daily Tools</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="text-green-600" size={20} />
+                  <span>Build Real Discipline</span>
+                </div>
+              </div>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tight mb-6 leading-tight">
-              Master Your Mind.<br />
-              <span className="text-stoic-blue">Own Your Life.</span>
-            </h1>
-
-            <p className="text-xl md:text-2xl text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
-              Stoicism isn't just philosophy—it's the operating system for a meaningful life.
-              Learn to control what you can, let go of what you can't, and build unshakeable discipline.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="#book"
-                className="bg-stoic-blue hover:bg-sky-600 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl flex items-center gap-2 group"
-              >
-                Get the Book
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
-              </a>
-              <a
-                href="#app"
-                className="border-2 border-slate-300 hover:border-stoic-blue text-slate-800 hover:text-stoic-blue px-8 py-4 rounded-lg text-lg font-bold transition-all flex items-center gap-2"
-              >
-                <Smartphone size={20} />
-                Try the App
-              </a>
-            </div>
-
-            <div className="mt-12 flex items-center justify-center gap-8 text-sm text-slate-500">
-              <div className="flex items-center gap-2">
-                <Check className="text-green-600" size={20} />
-                <span>No BS, Just Philosophy</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="text-green-600" size={20} />
-                <span>Practical Daily Tools</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check className="text-green-600" size={20} />
-                <span>Build Real Discipline</span>
+            {/* Right: Stoic AF Bust Mascot */}
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative" style={{
+                filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1))'
+              }}>
+                <img
+                  src="/images/marble_bust.png"
+                  alt="Stoic AF Marble Bust"
+                  className="w-full max-w-md lg:max-w-lg animate-float"
+                />
               </div>
             </div>
           </div>
@@ -605,9 +631,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-6 h-6 bg-stoic-blue rounded flex items-center justify-center text-white text-xs">
-                  <span className="font-bold">S</span>
-                </div>
+                <Logo className="w-6 h-6" />
                 <span className="text-lg font-bold text-white">STOIC AF</span>
               </div>
               <p className="text-sm text-slate-400 max-w-md leading-relaxed mb-6">
