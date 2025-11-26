@@ -47,13 +47,15 @@ export default function Home() {
         }),
       });
 
+      const data = await response.json();
+      console.log('ConvertKit response:', { status: response.status, data });
+
       if (response.ok) {
         alert('Thanks for subscribing! Check your email for confirmation.');
         setEmail('');
       } else {
-        const error = await response.json();
-        console.error('ConvertKit error:', error);
-        alert('Oops! Something went wrong. Please try again.');
+        console.error('ConvertKit error:', data);
+        alert(`Oops! ${data.message || 'Something went wrong. Please try again.'}`);
       }
     } catch (error) {
       console.error('Subscription error:', error);
