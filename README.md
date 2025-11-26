@@ -44,8 +44,20 @@ This app is configured for deployment via Coolify using Docker.
 - **Port**: 80 (nginx serves the static build)
 
 ### Environment Variables
-None required for basic deployment. Add as needed for:
-- Email service integration
+
+**ConvertKit Integration (Required):**
+```bash
+VITE_CONVERTKIT_FORM_ID=your_form_id
+VITE_CONVERTKIT_API_KEY=your_public_api_key
+```
+
+Get these from:
+1. Sign up at https://convertkit.com (free up to 1K subscribers)
+2. Create a form: Forms → Create Form → Inline
+3. Get Form ID from form settings
+4. Get API Key: Settings → Advanced → API Keys (use Public key)
+
+**Optional:**
 - Analytics tracking
 - Payment processing
 
@@ -76,12 +88,41 @@ All content is in `src/App.tsx` for easy editing:
 
 ## Integration Points
 
-### Email Newsletter
-Currently logs to console. Integrate with:
-- ConvertKit
-- Mailchimp
-- SendGrid
-- Custom API
+### Email Newsletter (ConvertKit)
+
+**Status:** ✅ Integrated with ConvertKit API
+
+The newsletter form submits directly to ConvertKit. Setup:
+
+1. **Create ConvertKit Account** (free tier)
+   - Go to https://convertkit.com
+   - Sign up and verify email
+
+2. **Create a Form**
+   - Forms → Create Form → Inline
+   - Name it "Stoic AF Newsletter"
+   - Copy the Form ID from settings
+
+3. **Get API Key**
+   - Settings → Advanced → API Keys
+   - Copy your **Public API Key** (not secret!)
+
+4. **Configure Environment Variables**
+   ```bash
+   # In Coolify, add these environment variables:
+   VITE_CONVERTKIT_FORM_ID=1234567
+   VITE_CONVERTKIT_API_KEY=your_public_key_here
+   ```
+
+5. **Redeploy**
+   - Coolify will rebuild with the new env vars
+   - Newsletter form will now submit to ConvertKit
+
+**Features:**
+- Double opt-in confirmation email
+- Automatic welcome sequence (configure in ConvertKit)
+- Subscriber tagging and segmentation
+- Email automation workflows
 
 ### Analytics
 Add tracking scripts to `index.html`:

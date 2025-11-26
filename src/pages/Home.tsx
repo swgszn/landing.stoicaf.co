@@ -9,13 +9,50 @@ import {
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleEmailSubmit = (e: React.FormEvent) => {
+  const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Integrate with email service
-    console.log('Email submitted:', email);
-    alert('Thanks for subscribing! Check your email.');
-    setEmail('');
+    setIsSubmitting(true);
+
+    const formId = import.meta.env.VITE_CONVERTKIT_FORM_ID;
+    const apiKey = import.meta.env.VITE_CONVERTKIT_API_KEY;
+
+    // Fallback if env vars not set (dev mode)
+    if (!formId || !apiKey) {
+      console.log('ConvertKit not configured. Email:', email);
+      alert('Thanks for subscribing! (ConvertKit integration pending)');
+      setEmail('');
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const response = await fetch(`https://api.convertkit.com/v3/forms/${formId}/subscribe`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          api_key: apiKey,
+          email: email,
+        }),
+      });
+
+      if (response.ok) {
+        alert('Thanks for subscribing! Check your email for confirmation.');
+        setEmail('');
+      } else {
+        const error = await response.json();
+        console.error('ConvertKit error:', error);
+        alert('Oops! Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Subscription error:', error);
+      alert('Oops! Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -539,9 +576,10 @@ export default function Home() {
               />
               <button
                 type="submit"
-                className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl whitespace-nowrap"
+                disabled={isSubmitting}
+                className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Subscribe Free
+                {isSubmitting ? 'Subscribing...' : 'Subscribe Free'}
               </button>
             </div>
             <p className="text-sm text-sky-100 mt-4">
