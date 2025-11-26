@@ -327,6 +327,7 @@ export default function Home() {
                   src="/images/book.png"
                   alt="Stoic AF Book"
                   className="w-full h-[600px] object-cover"
+                  style={{ objectPosition: 'center 65%' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end">
                   <div className="p-8 text-white">
