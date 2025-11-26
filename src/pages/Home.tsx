@@ -18,6 +18,14 @@ export default function Home() {
     const formId = import.meta.env.VITE_CONVERTKIT_FORM_ID;
     const apiKey = import.meta.env.VITE_CONVERTKIT_API_KEY;
 
+    // Debug logging
+    console.log('ConvertKit config:', {
+      formId: formId ? 'Set' : 'Missing',
+      apiKey: apiKey ? 'Set' : 'Missing',
+      formIdValue: formId,
+      allEnvVars: import.meta.env
+    });
+
     // Fallback if env vars not set (dev mode)
     if (!formId || !apiKey) {
       console.log('ConvertKit not configured. Email:', email);
