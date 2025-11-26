@@ -166,15 +166,22 @@ function App() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Book Image/Mockup */}
             <div className="relative">
-              <div className="bg-gradient-to-br from-stoic-blue to-sky-600 rounded-2xl shadow-2xl p-12 transform hover:scale-105 transition-transform">
-                <div className="bg-white rounded-lg p-8 shadow-xl">
-                  <BookOpen className="text-stoic-blue mb-4" size={64} />
-                  <h3 className="text-3xl font-black text-slate-900 mb-2">STOIC AF</h3>
-                  <p className="text-lg text-slate-600 font-semibold">The Millennial Bro's Guide to Stoicism</p>
-                  <div className="mt-6 flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="text-yellow-400 fill-yellow-400" size={20} />
-                    ))}
+              <div className="relative rounded-2xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                <img
+                  src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800&q=80"
+                  alt="Book mockup"
+                  className="w-full h-[600px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent flex items-end">
+                  <div className="p-8 text-white">
+                    <BookOpen className="mb-4" size={48} />
+                    <h3 className="text-4xl font-black mb-2">STOIC AF</h3>
+                    <p className="text-xl font-semibold mb-4">The Millennial Bro's Guide to Stoicism</p>
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="text-yellow-400 fill-yellow-400" size={20} />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -284,24 +291,25 @@ function App() {
 
             {/* App Mockup - Right Side */}
             <div className="order-1 lg:order-2 relative">
-              <div className="bg-gradient-to-br from-slate-900 to-slate-700 rounded-3xl shadow-2xl p-8 transform hover:scale-105 transition-transform">
-                <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                  <div className="bg-stoic-blue p-4 flex items-center gap-2">
-                    <Smartphone className="text-white" size={24} />
-                    <span className="text-white font-bold">Stoic Journal</span>
-                  </div>
-                  <div className="p-6 space-y-4">
-                    <div className="bg-slate-50 p-4 rounded-lg border-l-4 border-stoic-blue">
-                      <div className="text-xs text-slate-500 uppercase tracking-wider mb-2">Morning Meditation</div>
-                      <div className="font-semibold text-slate-800">What's in your control today?</div>
-                    </div>
-                    <div className="bg-slate-50 p-4 rounded-lg">
-                      <div className="text-xs text-slate-500 uppercase tracking-wider mb-2">Evening Reflection</div>
-                      <div className="font-semibold text-slate-800">What did you learn today?</div>
-                    </div>
-                    <div className="bg-slate-50 p-4 rounded-lg">
-                      <div className="text-xs text-slate-500 uppercase tracking-wider mb-2">Gratitude</div>
-                      <div className="font-semibold text-slate-800">Three things you're grateful for...</div>
+              <div className="relative rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition-transform">
+                <img
+                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80"
+                  alt="Journal app on phone"
+                  className="w-full h-[600px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent flex items-end">
+                  <div className="p-8 text-white w-full">
+                    <Smartphone className="mb-4" size={48} />
+                    <h3 className="text-3xl font-black mb-3">Daily Stoic Journal</h3>
+                    <div className="space-y-3 bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
+                      <div className="text-sm opacity-90">
+                        <div className="text-xs uppercase tracking-wider mb-1">Morning Meditation</div>
+                        <div className="font-semibold">What's in your control today?</div>
+                      </div>
+                      <div className="text-sm opacity-90">
+                        <div className="text-xs uppercase tracking-wider mb-1">Evening Reflection</div>
+                        <div className="font-semibold">What did you learn today?</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -331,13 +339,20 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
-              { name: 'Amor Fati Tee', price: '$32', desc: 'Love your fate. Premium cotton.' },
-              { name: 'Memento Mori Hoodie', price: '$58', desc: 'Remember you will die. Heavy fleece.' },
-              { name: 'Discipline Equals Freedom Hat', price: '$28', desc: 'Structured cap. Embroidered.' }
+              { name: 'Amor Fati Tee', price: '$32', desc: 'Love your fate. Premium cotton.', img: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80' },
+              { name: 'Memento Bro Hoodie', price: '$58', desc: 'Remember you will die. Heavy fleece.', img: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80' },
+              { name: 'Discipline Equals Freedom Hat', price: '$28', desc: 'Structured cap. Embroidered.', img: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80' }
             ].map((item, i) => (
               <div key={i} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="bg-gradient-to-br from-stoic-blue to-sky-600 h-48 flex items-center justify-center">
-                  <ShoppingBag className="text-white" size={64} />
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 right-4 bg-stoic-blue text-white px-3 py-1 rounded-full text-sm font-bold">
+                    NEW
+                  </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{item.name}</h3>
@@ -492,7 +507,7 @@ function App() {
           </div>
 
           <div className="pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
-            <p>&copy; {new Date().getFullYear()} Stoic AF. All rights reserved. Memento Mori.</p>
+            <p>&copy; {new Date().getFullYear()} Stoic AF. All rights reserved. Memento Bro.</p>
           </div>
         </div>
       </footer>
