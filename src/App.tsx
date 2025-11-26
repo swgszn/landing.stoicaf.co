@@ -34,6 +34,9 @@ function App() {
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center space-x-8">
+              <a href="https://blog.stoicaf.co" className="text-sm font-semibold text-slate-600 hover:text-stoic-blue transition-colors">
+                BLOG
+              </a>
               <a href="#book" className="text-sm font-semibold text-slate-600 hover:text-stoic-blue transition-colors">
                 THE BOOK
               </a>
@@ -61,6 +64,9 @@ function App() {
         {/* Mobile Nav */}
         {isMenuOpen && (
           <div className="md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-3">
+            <a href="https://blog.stoicaf.co" className="block px-3 py-2 text-base font-bold text-slate-800 hover:bg-slate-50 rounded-md">
+              BLOG
+            </a>
             <a href="#book" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-base font-bold text-slate-800 hover:bg-slate-50 rounded-md">
               THE BOOK
             </a>
@@ -491,7 +497,7 @@ function App() {
                 <li><a href="#book" className="hover:text-stoic-blue transition-colors">The Book</a></li>
                 <li><a href="#app" className="hover:text-stoic-blue transition-colors">Journal App</a></li>
                 <li><a href="#merch" className="hover:text-stoic-blue transition-colors">Merch Store</a></li>
-                <li><a href="/blog" className="hover:text-stoic-blue transition-colors">Blog</a></li>
+                <li><a href="https://blog.stoicaf.co" className="hover:text-stoic-blue transition-colors">Blog</a></li>
               </ul>
             </div>
 
