@@ -214,7 +214,7 @@ export default function Home() {
       {/* Divider */}
       <section className={`py-16 ${t.colors.divider} border-y ${t.colors.dividerBorder}`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <blockquote className={`text-2xl md:text-3xl font-serif italic ${t.colors.bodyText} leading-relaxed`}>
+          <blockquote className="text-2xl md:text-3xl font-serif italic text-slate-300 leading-relaxed">
             "You have power over your mind—not outside events. Realize this, and you will find strength."
           </blockquote>
           <p className="mt-4 text-stoic-blue font-bold text-lg">— Marcus Aurelius</p>
