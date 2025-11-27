@@ -135,9 +135,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-12 bg-slate-900">
         <div className="mx-auto relative" style={{ width: '85%', maxWidth: '1280px' }}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 items-center">
             {/* Left: Stoic AF Bust Mascot */}
-            <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
+            <div className="relative flex justify-center order-2 lg:order-1 lg:pr-8">
               <div className="relative" style={{
                 filter: 'drop-shadow(0 12px 24px rgba(75, 144, 200, 0.15))'
               }}>
