@@ -112,17 +112,17 @@ export default function Home() {
 
         {/* Mobile Nav */}
         {isMenuOpen && (
-          <div className="md:hidden bg-black border-b border-slate-800 px-4 py-4 space-y-3">
-            <a href="https://blog.stoicaf.co" className="block px-3 py-2 text-base font-bold text-slate-200 hover:bg-slate-800 rounded-md">
+          <div className={`md:hidden ${t.colors.navMobile} border-b ${t.colors.navBorder} px-4 py-4 space-y-3`}>
+            <a href="https://blog.stoicaf.co" className={`block px-3 py-2 text-base font-bold ${t.colors.navMobileText} ${t.colors.navMobileHover} rounded-md`}>
               BLOG
             </a>
-            <a href="#book" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-base font-bold text-slate-200 hover:bg-slate-800 rounded-md">
+            <a href="#book" onClick={() => setIsMenuOpen(false)} className={`block px-3 py-2 text-base font-bold ${t.colors.navMobileText} ${t.colors.navMobileHover} rounded-md`}>
               THE BOOK
             </a>
-            <a href="#app" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-base font-bold text-slate-200 hover:bg-slate-800 rounded-md">
+            <a href="#app" onClick={() => setIsMenuOpen(false)} className={`block px-3 py-2 text-base font-bold ${t.colors.navMobileText} ${t.colors.navMobileHover} rounded-md`}>
               THE APP
             </a>
-            <a href="#merch" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-base font-bold text-slate-200 hover:bg-slate-800 rounded-md">
+            <a href="#merch" onClick={() => setIsMenuOpen(false)} className={`block px-3 py-2 text-base font-bold ${t.colors.navMobileText} ${t.colors.navMobileHover} rounded-md`}>
               MERCH
             </a>
             <a href="#newsletter" onClick={() => setIsMenuOpen(false)} className="block bg-stoic-blue text-white px-4 py-3 rounded-md font-bold text-center">
@@ -514,11 +514,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">{item.name}</h3>
-                  <p className="text-slate-300 mb-4">{item.desc}</p>
+                  <h3 className={`text-xl font-bold ${t.colors.merchCardTitle} mb-2`}>{item.name}</h3>
+                  <p className={`${t.colors.merchCardDesc} mb-4`}>{item.desc}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-black text-stoic-blue">{item.price}</span>
-                    <button className="bg-stoic-blue hover:bg-sky-500 text-white px-6 py-2 rounded-lg font-bold transition-colors">
+                    <button className={`${t.colors.merchButton} ${t.colors.merchButtonHover} text-white px-6 py-2 rounded-lg font-bold transition-colors`}>
                       Shop Now
                     </button>
                   </div>
@@ -561,18 +561,18 @@ export default function Home() {
                 text: 'Best $25 I ever spent. The app keeps me consistent. The book keeps me grounded. This is the real deal.'
               }
             ].map((testimonial, i) => (
-              <div key={i} className={`${t.colors.card} p-8 rounded-xl border-l-4 border-stoic-blue`}>
+              <div key={i} className={`${t.colors.testimonialCard} p-8 rounded-xl border-l-4 border-stoic-blue`}>
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, j) => (
                     <Star key={j} className="text-yellow-400 fill-yellow-400" size={18} />
                   ))}
                 </div>
-                <p className="text-slate-300 mb-6 italic leading-relaxed">
+                <p className={`${t.colors.testimonialQuote} mb-6 italic leading-relaxed`}>
                   "{testimonial.text}"
                 </p>
                 <div>
-                  <div className="font-bold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-slate-400">{testimonial.role}</div>
+                  <div className={`font-bold ${t.colors.testimonialName}`}>{testimonial.name}</div>
+                  <div className={`text-sm ${t.colors.testimonialRole}`}>{testimonial.role}</div>
                 </div>
               </div>
             ))}
@@ -584,7 +584,7 @@ export default function Home() {
       <section id="newsletter" className="py-24 px-4 sm:px-6 lg:px-12 bg-stoic-blue">
         <div className="max-w-4xl mx-auto text-center">
           <Mail className="text-white mx-auto mb-6" size={64} />
-          <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight`}>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
             Get Weekly Stoic Insights
           </h2>
           <p className="text-xl text-sky-100 mb-10 max-w-2xl mx-auto">

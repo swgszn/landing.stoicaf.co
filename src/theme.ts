@@ -25,6 +25,8 @@ export interface Theme {
     bodyText: string;
     metaText: string;
     navText: string;
+    navMobileText: string;
+    navMobileHover: string;
 
     // Cards & Components
     card: string;
@@ -32,6 +34,14 @@ export interface Theme {
     badge: string;
     checkIcon: string;
     checkIconColor: string;
+    testimonialCard: string;
+    testimonialQuote: string;
+    testimonialName: string;
+    testimonialRole: string;
+    merchCardTitle: string;
+    merchCardDesc: string;
+    merchButton: string;
+    merchButtonHover: string;
 
     // Buttons
     buttonBorder: string;
@@ -66,6 +76,8 @@ export const themes: Record<string, Theme> = {
       bodyText: 'text-slate-300',
       metaText: 'text-slate-400',
       navText: 'text-slate-300',
+      navMobileText: 'text-slate-200',
+      navMobileHover: 'hover:bg-slate-800',
 
       // Cards & Components
       card: 'bg-slate-800',
@@ -73,6 +85,14 @@ export const themes: Record<string, Theme> = {
       badge: 'bg-stoic-blue/20',
       checkIcon: 'bg-stoic-blue/20',
       checkIconColor: 'text-stoic-blue',
+      testimonialCard: 'bg-slate-800',
+      testimonialQuote: 'text-slate-300',
+      testimonialName: 'text-white',
+      testimonialRole: 'text-slate-400',
+      merchCardTitle: 'text-white',
+      merchCardDesc: 'text-slate-300',
+      merchButton: 'bg-stoic-blue',
+      merchButtonHover: 'hover:bg-sky-500',
 
       // Buttons
       buttonBorder: 'border-slate-600',
@@ -106,6 +126,8 @@ export const themes: Record<string, Theme> = {
       bodyText: 'text-slate-600',
       metaText: 'text-slate-500',
       navText: 'text-slate-600',
+      navMobileText: 'text-slate-800',
+      navMobileHover: 'hover:bg-slate-50',
 
       // Cards & Components
       card: 'bg-white',
@@ -113,6 +135,14 @@ export const themes: Record<string, Theme> = {
       badge: 'bg-stoic-blue/10',
       checkIcon: 'bg-green-100',
       checkIconColor: 'text-green-600',
+      testimonialCard: 'bg-slate-50',
+      testimonialQuote: 'text-slate-700',
+      testimonialName: 'text-slate-900',
+      testimonialRole: 'text-slate-500',
+      merchCardTitle: 'text-slate-900',
+      merchCardDesc: 'text-slate-600',
+      merchButton: 'bg-slate-900',
+      merchButtonHover: 'hover:bg-stoic-blue',
 
       // Buttons
       buttonBorder: 'border-slate-300',
