@@ -374,7 +374,7 @@ export default function Home() {
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className={`${t.colors.checkIcon} rounded-full p-1 mt-1`}>
-                      <Check className="text-stoic-blue" size={16} />
+                      <Check className={t.colors.checkIconColor} size={16} />
                     </div>
                     <span className={`${t.colors.bodyText} font-semibold`}>{item}</span>
                   </li>
@@ -426,7 +426,7 @@ export default function Home() {
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className={`${t.colors.checkIcon} rounded-full p-1 mt-1`}>
-                      <Check className="text-stoic-blue" size={16} />
+                      <Check className={t.colors.checkIconColor} size={16} />
                     </div>
                     <span className={`${t.colors.bodyText} font-semibold`}>{item}</span>
                   </li>

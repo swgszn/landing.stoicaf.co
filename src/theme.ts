@@ -31,6 +31,7 @@ export interface Theme {
     cardHover: string;
     badge: string;
     checkIcon: string;
+    checkIconColor: string;
 
     // Buttons
     buttonBorder: string;
@@ -70,7 +71,8 @@ export const themes: Record<string, Theme> = {
       card: 'bg-slate-800',
       cardHover: 'hover:bg-slate-800',
       badge: 'bg-stoic-blue/20',
-      checkIcon: 'bg-stoic-blue/20 text-stoic-blue',
+      checkIcon: 'bg-stoic-blue/20',
+      checkIconColor: 'text-stoic-blue',
 
       // Buttons
       buttonBorder: 'border-slate-600',
@@ -109,7 +111,8 @@ export const themes: Record<string, Theme> = {
       card: 'bg-white',
       cardHover: 'hover:bg-slate-50',
       badge: 'bg-stoic-blue/10',
-      checkIcon: 'bg-green-100 text-green-600',
+      checkIcon: 'bg-green-100',
+      checkIconColor: 'text-green-600',
 
       // Buttons
       buttonBorder: 'border-slate-300',
