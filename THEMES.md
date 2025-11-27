@@ -30,8 +30,8 @@ VITE_LANDING_THEME=light npm run build
 
 ## Available Themes
 
-- **dark** (default) - Ultra-dark theme with black header and dark gray hero
-- **light** - Original light theme with white backgrounds
+- **light** (default/failsafe) - Original light theme with white backgrounds
+- **dark** - Ultra-dark theme with black header and dark gray hero
 
 ## Creating Custom Themes
 
@@ -99,6 +99,7 @@ VITE_LANDING_THEME=light npm run dev
 ## Notes
 
 - Themes are baked in at build time (not runtime switching)
-- Default theme is `dark` if no env var is set
-- Invalid theme names fall back to `dark`
+- **Failsafe**: Defaults to `light` if no env var is set or invalid theme name
+- Console logs show which theme is active
 - Each Coolify deployment can have its own theme
+- Invalid theme names trigger a console warning and fall back to light

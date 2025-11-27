@@ -119,10 +119,21 @@ export const themes: Record<string, Theme> = {
   },
 };
 
-// Get theme from environment variable, default to dark
+// Get theme from environment variable with failsafe defaults
 const getTheme = (): Theme => {
-  const themeName = import.meta.env.VITE_LANDING_THEME || 'dark';
-  return themes[themeName] || themes.dark;
+  // Default to 'light' if no theme is set (failsafe)
+  const themeName = import.meta.env.VITE_LANDING_THEME || 'light';
+
+  // If invalid theme name, fall back to light
+  const selectedTheme = themes[themeName];
+
+  if (!selectedTheme) {
+    console.warn(`Theme "${themeName}" not found. Falling back to light theme.`);
+    return themes.light;
+  }
+
+  console.log(`Using theme: ${selectedTheme.name}`);
+  return selectedTheme;
 };
 
 export const theme = getTheme();
