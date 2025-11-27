@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-slate-900/95 backdrop-blur-md border-b border-slate-700 z-50">
+      <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-md border-b border-slate-800 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2">
@@ -110,7 +110,7 @@ export default function Home() {
 
         {/* Mobile Nav */}
         {isMenuOpen && (
-          <div className="md:hidden bg-slate-900 border-b border-slate-700 px-4 py-4 space-y-3">
+          <div className="md:hidden bg-black border-b border-slate-800 px-4 py-4 space-y-3">
             <a href="https://blog.stoicaf.co" className="block px-3 py-2 text-base font-bold text-slate-200 hover:bg-slate-800 rounded-md">
               BLOG
             </a>
@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* Divider */}
-      <section className="py-16 bg-slate-900 border-y border-slate-800">
+      <section className="py-16 bg-black border-y border-slate-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <blockquote className="text-2xl md:text-3xl font-serif italic text-slate-300 leading-relaxed">
             "You have power over your mind—not outside events. Realize this, and you will find strength."
