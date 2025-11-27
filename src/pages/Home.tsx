@@ -131,7 +131,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-12 bg-slate-950">
+      <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-12 bg-slate-900">
         <div className="mx-auto relative" style={{ width: '85%', maxWidth: '1280px' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Stoic AF Bust Mascot */}
