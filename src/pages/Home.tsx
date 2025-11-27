@@ -131,7 +131,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-12 bg-slate-900">
+      <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-12 bg-slate-950">
         <div className="mx-auto relative" style={{ width: '85%', maxWidth: '1280px' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left: Stoic AF Bust Mascot */}
@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* Divider */}
-      <section className="py-16 bg-slate-950 border-y border-slate-800">
+      <section className="py-16 bg-slate-900 border-y border-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <blockquote className="text-2xl md:text-3xl font-serif italic text-slate-300 leading-relaxed">
             "You have power over your mind—not outside events. Realize this, and you will find strength."
@@ -220,7 +220,7 @@ export default function Home() {
       </section>
 
       {/* Featured Blog Articles */}
-      <section className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-900">
+      <section className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-950">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block mb-4 px-4 py-2 bg-stoic-blue/10 rounded-full">
@@ -394,7 +394,7 @@ export default function Home() {
       </section>
 
       {/* The App Section */}
-      <section id="app" className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-900">
+      <section id="app" className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-950">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* App Description - Left Side */}
@@ -532,7 +532,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-900">
+      <section className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-950">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
