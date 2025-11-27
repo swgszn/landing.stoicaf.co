@@ -348,17 +348,17 @@ export default function Home() {
 
             {/* Book Description */}
             <div>
-              <div className="inline-block mb-4 px-4 py-2 bg-stoic-blue/10 rounded-full">
+              <div className={`inline-block mb-4 px-4 py-2 ${t.colors.badge} rounded-full`}>
                 <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
                   The Book
                 </span>
               </div>
 
-              <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight">
+              <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight`}>
                 Your Playbook for <span className="text-stoic-blue">Unshakeable Calm</span>
               </h2>
 
-              <p className={`text-lg ${t.colors.bodyText} mb-6 leading-relaxed">
+              <p className={`text-lg ${t.colors.bodyText} mb-6 leading-relaxed`}>
                 This isn't another self-help book full of fluff. It's a no-BS guide to Stoic philosophy,
                 rewritten for the modern grind. Learn how ancient Romans conquered anxiety, built empires,
                 and died with zero regrets.
@@ -373,10 +373,10 @@ export default function Home() {
                   'Journal Templates & Exercises'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className={`${t.colors.checkIcon} rounded-full p-1 mt-1">
+                    <div className={`${t.colors.checkIcon} rounded-full p-1 mt-1`}>
                       <Check className="text-stoic-blue" size={16} />
                     </div>
-                    <span className={`${t.colors.bodyText} font-semibold">{item}</span>
+                    <span className={`${t.colors.bodyText} font-semibold`}>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -386,7 +386,7 @@ export default function Home() {
                   Pre-Order Now - $24.99
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                 </button>
-                <button className={`border-2 ${t.colors.buttonBorder} hover:border-stoic-blue text-slate-200 hover:text-stoic-blue px-8 py-4 rounded-lg text-lg font-bold transition-all">
+                <button className={`border-2 ${t.colors.buttonBorder} hover:border-stoic-blue ${t.colors.buttonText} ${t.colors.buttonHoverText} px-8 py-4 rounded-lg text-lg font-bold transition-all`}>
                   Read Sample Chapter
                 </button>
               </div>
@@ -401,17 +401,17 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* App Description - Left Side */}
             <div className="order-2 lg:order-1">
-              <div className="inline-block mb-4 px-4 py-2 bg-stoic-blue/10 rounded-full">
+              <div className={`inline-block mb-4 px-4 py-2 ${t.colors.badge} rounded-full`}>
                 <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
                   The Journal App
                 </span>
               </div>
 
-              <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight">
+              <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight`}>
                 Your Daily <span className="text-stoic-blue">Stoic Practice</span>
               </h2>
 
-              <p className={`text-lg ${t.colors.bodyText} mb-6 leading-relaxed">
+              <p className={`text-lg ${t.colors.bodyText} mb-6 leading-relaxed`}>
                 Marcus Aurelius journaled daily. So should you. Our app makes it effortless with
                 guided prompts, reflection templates, and progress tracking built on Stoic principles.
               </p>
@@ -425,10 +425,10 @@ export default function Home() {
                   'Customizable Templates'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className={`${t.colors.checkIcon} rounded-full p-1 mt-1">
+                    <div className={`${t.colors.checkIcon} rounded-full p-1 mt-1`}>
                       <Check className="text-stoic-blue" size={16} />
                     </div>
-                    <span className={`${t.colors.bodyText} font-semibold">{item}</span>
+                    <span className={`${t.colors.bodyText} font-semibold`}>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -438,12 +438,12 @@ export default function Home() {
                   <Smartphone size={20} />
                   Download iOS/Android
                 </button>
-                <button className={`border-2 ${t.colors.buttonBorder} hover:border-stoic-blue text-slate-200 hover:text-stoic-blue px-8 py-4 rounded-lg text-lg font-bold transition-all">
+                <button className={`border-2 ${t.colors.buttonBorder} hover:border-stoic-blue ${t.colors.buttonText} ${t.colors.buttonHoverText} px-8 py-4 rounded-lg text-lg font-bold transition-all`}>
                   Try Web Version
                 </button>
               </div>
 
-              <p className="text-sm text-slate-400 mt-4">
+              <p className={`text-sm ${t.colors.metaText} mt-4`}>
                 Free to start. Premium features unlock deeper insights.
               </p>
             </div>
@@ -481,17 +481,17 @@ export default function Home() {
       {/* Merch Section */}
       <section id="merch" className={`py-24 px-4 sm:px-6 lg:px-12 ${t.colors.merchSection}`}>
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-block mb-4 px-4 py-2 bg-stoic-blue/10 rounded-full">
+          <div className={`inline-block mb-4 px-4 py-2 ${t.colors.badge} rounded-full`}>
             <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
               The Gear
             </span>
           </div>
 
-          <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight">
+          <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight`}>
             Wear the <span className="text-stoic-blue">Mindset</span>
           </h2>
 
-          <p className={`text-lg ${t.colors.bodyText} mb-12 max-w-2xl mx-auto">
+          <p className={`text-lg ${t.colors.bodyText} mb-12 max-w-2xl mx-auto`}>
             High-quality apparel with Stoic quotes and minimalist designs.
             Every piece is a reminder to stay disciplined, stay focused, stay Stoic AF.
           </p>
@@ -502,7 +502,7 @@ export default function Home() {
               { name: 'Memento Bro Hoodie', price: '$58', desc: 'Remember you will die. Heavy fleece.', img: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80' },
               { name: 'Discipline Equals Freedom Hat', price: '$28', desc: 'Structured cap. Embroidered.', img: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80' }
             ].map((item, i) => (
-              <div key={i} className={`${t.colors.card} rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border ${t.colors.cardBorder}">
+              <div key={i} className={`${t.colors.card} rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border ${t.colors.cardBorder}`}>
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={item.img}
@@ -537,10 +537,10 @@ export default function Home() {
       <section className={`py-24 px-4 sm:px-6 lg:px-12 ${t.colors.testimonialsSection}`}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-4">
+            <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-4`}>
               What People Are Saying
             </h2>
-            <p className={`text-lg ${t.colors.metaText}">Real reviews from real readers building real discipline</p>
+            <p className={`text-lg ${t.colors.metaText}`}>Real reviews from real readers building real discipline</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -561,7 +561,7 @@ export default function Home() {
                 text: 'Best $25 I ever spent. The app keeps me consistent. The book keeps me grounded. This is the real deal.'
               }
             ].map((testimonial, i) => (
-              <div key={i} className={`${t.colors.card} p-8 rounded-xl border-l-4 border-stoic-blue">
+              <div key={i} className={`${t.colors.card} p-8 rounded-xl border-l-4 border-stoic-blue`}>
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, j) => (
                     <Star key={j} className="text-yellow-400 fill-yellow-400" size={18} />
@@ -584,7 +584,7 @@ export default function Home() {
       <section id="newsletter" className="py-24 px-4 sm:px-6 lg:px-12 bg-stoic-blue">
         <div className="max-w-4xl mx-auto text-center">
           <Mail className="text-white mx-auto mb-6" size={64} />
-          <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight">
+          <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight`}>
             Get Weekly Stoic Insights
           </h2>
           <p className="text-xl text-sky-100 mb-10 max-w-2xl mx-auto">
