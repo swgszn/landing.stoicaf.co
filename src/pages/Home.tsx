@@ -6,11 +6,13 @@ import {
   Mail, ChevronDown, Calendar, Clock
 } from 'lucide-react';
 import Logo from '../components/Logo';
+import { useTheme } from '../hooks/useTheme';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const t = useTheme();
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -67,30 +69,30 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className={`min-h-screen ${t.colors.body}`}>
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-md border-b border-slate-800 z-50">
+      <nav className={`fixed top-0 w-full ${t.colors.nav} backdrop-blur-md border-b ${t.colors.navBorder} z-50`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-2">
               <Logo className="w-8 h-8" />
-              <span className="text-xl font-extrabold tracking-tight text-white">
+              <span className={`text-xl font-extrabold tracking-tight ${t.colors.heading}`}>
                 STOIC AF
               </span>
             </div>
 
             {/* Desktop Nav */}
             <div className="hidden md:flex items-center space-x-8">
-              <a href="https://blog.stoicaf.co" className="text-sm font-semibold text-slate-300 hover:text-stoic-blue transition-colors">
+              <a href="https://blog.stoicaf.co" className={`text-sm font-semibold ${t.colors.navText} hover:text-stoic-blue transition-colors`}>
                 BLOG
               </a>
-              <a href="#book" className="text-sm font-semibold text-slate-300 hover:text-stoic-blue transition-colors">
+              <a href="#book" className={`text-sm font-semibold ${t.colors.navText} hover:text-stoic-blue transition-colors`}>
                 THE BOOK
               </a>
-              <a href="#app" className="text-sm font-semibold text-slate-300 hover:text-stoic-blue transition-colors">
+              <a href="#app" className={`text-sm font-semibold ${t.colors.navText} hover:text-stoic-blue transition-colors`}>
                 THE APP
               </a>
-              <a href="#merch" className="text-sm font-semibold text-slate-300 hover:text-stoic-blue transition-colors">
+              <a href="#merch" className={`text-sm font-semibold ${t.colors.navText} hover:text-stoic-blue transition-colors`}>
                 MERCH
               </a>
               <a href="#newsletter" className="bg-stoic-blue hover:bg-sky-500 text-white px-6 py-2.5 rounded-md text-sm font-bold transition-all shadow-sm hover:shadow-md">
