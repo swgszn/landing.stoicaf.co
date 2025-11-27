@@ -133,7 +133,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-12 bg-slate-900">
+      <section className={`relative overflow-hidden pt-24 pb-20 px-4 sm:px-6 lg:px-12 ${t.colors.hero}`}>
         <div className="mx-auto relative" style={{ width: '85%', maxWidth: '1280px' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-4 items-center">
             {/* Left: Stoic AF Bust Mascot */}
@@ -151,18 +151,18 @@ export default function Home() {
 
             {/* Right: Content */}
             <div className="fade-in-up order-1 lg:order-2">
-              <div className="inline-block mb-6 px-4 py-2 bg-stoic-blue/20 rounded-full">
+              <div className={`inline-block mb-6 px-4 py-2 ${t.colors.badge} rounded-full`}>
                 <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
                   Ancient Wisdom, Modern Application
                 </span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-black text-white tracking-tight mb-6 leading-tight">
+              <h1 className={`text-5xl md:text-7xl font-black ${t.colors.heading} tracking-tight mb-6 leading-tight`}>
                 Master Your Mind.<br />
                 <span className="text-stoic-blue">Own Your Life.</span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-slate-300 mb-10 leading-relaxed">
+              <p className={`text-xl md:text-2xl ${t.colors.bodyText} mb-10 leading-relaxed`}>
                 Stoicism isn't just philosophy—it's the operating system for a meaningful life.
                 Learn to control what you can, let go of what you can't, and build unshakeable discipline.
               </p>
@@ -177,14 +177,14 @@ export default function Home() {
                 </a>
                 <a
                   href="#app"
-                  className="border-2 border-slate-600 hover:border-stoic-blue text-slate-200 hover:text-stoic-blue px-8 py-4 rounded-lg text-lg font-bold transition-all flex items-center justify-center gap-2"
+                  className={`border-2 ${t.colors.buttonBorder} hover:border-stoic-blue ${t.colors.buttonText} ${t.colors.buttonHoverText} px-8 py-4 rounded-lg text-lg font-bold transition-all flex items-center justify-center gap-2`}
                 >
                   <Smartphone size={20} />
                   Try the App
                 </a>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-6 text-sm text-slate-400">
+              <div className={`mt-8 flex flex-wrap gap-6 text-sm ${t.colors.metaText}`}>
                 <div className="flex items-center gap-2">
                   <Check className="text-stoic-blue" size={20} />
                   <span>No BS, Just Philosophy</span>
@@ -212,9 +212,9 @@ export default function Home() {
       </section>
 
       {/* Divider */}
-      <section className="py-16 bg-black border-y border-slate-900">
+      <section className={`py-16 ${t.colors.divider} border-y ${t.colors.dividerBorder}`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <blockquote className="text-2xl md:text-3xl font-serif italic text-slate-300 leading-relaxed">
+          <blockquote className={`text-2xl md:text-3xl font-serif italic ${t.colors.bodyText} leading-relaxed`}>
             "You have power over your mind—not outside events. Realize this, and you will find strength."
           </blockquote>
           <p className="mt-4 text-stoic-blue font-bold text-lg">— Marcus Aurelius</p>
@@ -222,18 +222,18 @@ export default function Home() {
       </section>
 
       {/* Featured Blog Articles */}
-      <section className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-950">
+      <section className={`py-24 px-4 sm:px-6 lg:px-12 ${t.colors.blogSection}`}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-block mb-4 px-4 py-2 bg-stoic-blue/10 rounded-full">
+            <div className={`inline-block mb-4 px-4 py-2 ${t.colors.badge} rounded-full`}>
               <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
                 From The Blog
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+            <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-4`}>
               Latest Stoic <span className="text-stoic-blue">Insights</span>
             </h2>
-            <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+            <p className={`text-lg ${t.colors.metaText} max-w-2xl mx-auto`}>
               Weekly wisdom on building discipline, conquering anxiety, and living with purpose.
             </p>
           </div>
@@ -268,7 +268,7 @@ export default function Home() {
               <a
                 key={i}
                 href="https://blog.stoicaf.co"
-                className="group bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border border-slate-700 hover:border-stoic-blue"
+                className={`group ${t.colors.card} rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 border ${t.colors.cardBorder} hover:border-stoic-blue`}
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -281,7 +281,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center gap-4 text-xs text-slate-400 mb-3">
+                  <div className={`flex items-center gap-4 text-xs ${t.colors.metaText} mb-3`}>
                     <div className="flex items-center gap-1">
                       <Calendar size={14} />
                       <span>{article.date}</span>
@@ -291,10 +291,10 @@ export default function Home() {
                       <span>{article.readTime} read</span>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-stoic-blue transition-colors">
+                  <h3 className={`text-xl font-bold ${t.colors.heading} mb-3 group-hover:text-stoic-blue transition-colors`}>
                     {article.title}
                   </h3>
-                  <p className="text-slate-300 leading-relaxed mb-4">
+                  <p className={`${t.colors.bodyText} leading-relaxed mb-4`}>
                     {article.excerpt}
                   </p>
                   <div className="flex items-center gap-2 text-stoic-blue font-semibold text-sm group-hover:gap-3 transition-all">
@@ -319,7 +319,7 @@ export default function Home() {
       </section>
 
       {/* The Book Section */}
-      <section id="book" className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-950">
+      <section id="book" className={`py-24 px-4 sm:px-6 lg:px-12 ${t.colors.bookSection}`}>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Book Image/Mockup */}
@@ -354,11 +354,11 @@ export default function Home() {
                 </span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+              <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight">
                 Your Playbook for <span className="text-stoic-blue">Unshakeable Calm</span>
               </h2>
 
-              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
+              <p className={`text-lg ${t.colors.bodyText} mb-6 leading-relaxed">
                 This isn't another self-help book full of fluff. It's a no-BS guide to Stoic philosophy,
                 rewritten for the modern grind. Learn how ancient Romans conquered anxiety, built empires,
                 and died with zero regrets.
@@ -373,10 +373,10 @@ export default function Home() {
                   'Journal Templates & Exercises'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className="bg-stoic-blue/20 rounded-full p-1 mt-1">
+                    <div className={`${t.colors.checkIcon} rounded-full p-1 mt-1">
                       <Check className="text-stoic-blue" size={16} />
                     </div>
-                    <span className="text-slate-200 font-semibold">{item}</span>
+                    <span className={`${t.colors.bodyText} font-semibold">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -386,7 +386,7 @@ export default function Home() {
                   Pre-Order Now - $24.99
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                 </button>
-                <button className="border-2 border-slate-600 hover:border-stoic-blue text-slate-200 hover:text-stoic-blue px-8 py-4 rounded-lg text-lg font-bold transition-all">
+                <button className={`border-2 ${t.colors.buttonBorder} hover:border-stoic-blue text-slate-200 hover:text-stoic-blue px-8 py-4 rounded-lg text-lg font-bold transition-all">
                   Read Sample Chapter
                 </button>
               </div>
@@ -396,7 +396,7 @@ export default function Home() {
       </section>
 
       {/* The App Section */}
-      <section id="app" className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-950">
+      <section id="app" className={`py-24 px-4 sm:px-6 lg:px-12 ${t.colors.appSection}`}>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* App Description - Left Side */}
@@ -407,11 +407,11 @@ export default function Home() {
                 </span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+              <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight">
                 Your Daily <span className="text-stoic-blue">Stoic Practice</span>
               </h2>
 
-              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
+              <p className={`text-lg ${t.colors.bodyText} mb-6 leading-relaxed">
                 Marcus Aurelius journaled daily. So should you. Our app makes it effortless with
                 guided prompts, reflection templates, and progress tracking built on Stoic principles.
               </p>
@@ -425,10 +425,10 @@ export default function Home() {
                   'Customizable Templates'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <div className="bg-stoic-blue/20 rounded-full p-1 mt-1">
+                    <div className={`${t.colors.checkIcon} rounded-full p-1 mt-1">
                       <Check className="text-stoic-blue" size={16} />
                     </div>
-                    <span className="text-slate-200 font-semibold">{item}</span>
+                    <span className={`${t.colors.bodyText} font-semibold">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -438,7 +438,7 @@ export default function Home() {
                   <Smartphone size={20} />
                   Download iOS/Android
                 </button>
-                <button className="border-2 border-slate-600 hover:border-stoic-blue text-slate-200 hover:text-stoic-blue px-8 py-4 rounded-lg text-lg font-bold transition-all">
+                <button className={`border-2 ${t.colors.buttonBorder} hover:border-stoic-blue text-slate-200 hover:text-stoic-blue px-8 py-4 rounded-lg text-lg font-bold transition-all">
                   Try Web Version
                 </button>
               </div>
@@ -479,7 +479,7 @@ export default function Home() {
       </section>
 
       {/* Merch Section */}
-      <section id="merch" className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-950">
+      <section id="merch" className={`py-24 px-4 sm:px-6 lg:px-12 ${t.colors.merchSection}`}>
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-block mb-4 px-4 py-2 bg-stoic-blue/10 rounded-full">
             <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
@@ -487,11 +487,11 @@ export default function Home() {
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+          <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight">
             Wear the <span className="text-stoic-blue">Mindset</span>
           </h2>
 
-          <p className="text-lg text-slate-300 mb-12 max-w-2xl mx-auto">
+          <p className={`text-lg ${t.colors.bodyText} mb-12 max-w-2xl mx-auto">
             High-quality apparel with Stoic quotes and minimalist designs.
             Every piece is a reminder to stay disciplined, stay focused, stay Stoic AF.
           </p>
@@ -502,7 +502,7 @@ export default function Home() {
               { name: 'Memento Bro Hoodie', price: '$58', desc: 'Remember you will die. Heavy fleece.', img: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80' },
               { name: 'Discipline Equals Freedom Hat', price: '$28', desc: 'Structured cap. Embroidered.', img: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80' }
             ].map((item, i) => (
-              <div key={i} className="bg-slate-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-slate-700">
+              <div key={i} className={`${t.colors.card} rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border ${t.colors.cardBorder}">
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={item.img}
@@ -534,13 +534,13 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 px-4 sm:px-6 lg:px-12 bg-slate-950">
+      <section className={`py-24 px-4 sm:px-6 lg:px-12 ${t.colors.testimonialsSection}`}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+            <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-4">
               What People Are Saying
             </h2>
-            <p className="text-lg text-slate-400">Real reviews from real readers building real discipline</p>
+            <p className={`text-lg ${t.colors.metaText}">Real reviews from real readers building real discipline</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -561,7 +561,7 @@ export default function Home() {
                 text: 'Best $25 I ever spent. The app keeps me consistent. The book keeps me grounded. This is the real deal.'
               }
             ].map((testimonial, i) => (
-              <div key={i} className="bg-slate-800 p-8 rounded-xl border-l-4 border-stoic-blue">
+              <div key={i} className={`${t.colors.card} p-8 rounded-xl border-l-4 border-stoic-blue">
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, j) => (
                     <Star key={j} className="text-yellow-400 fill-yellow-400" size={18} />
@@ -584,7 +584,7 @@ export default function Home() {
       <section id="newsletter" className="py-24 px-4 sm:px-6 lg:px-12 bg-stoic-blue">
         <div className="max-w-4xl mx-auto text-center">
           <Mail className="text-white mx-auto mb-6" size={64} />
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+          <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight">
             Get Weekly Stoic Insights
           </h2>
           <p className="text-xl text-sky-100 mb-10 max-w-2xl mx-auto">
