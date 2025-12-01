@@ -317,7 +317,7 @@ function App() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-stoic-blue hover:bg-sky-600 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group">
-                  Pre-Order Now - $24.99
+                  Pre-Order Now - $25
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                 </button>
                 <button className="border-2 border-slate-300 hover:border-stoic-blue text-slate-800 hover:text-stoic-blue px-8 py-4 rounded-lg text-lg font-bold transition-all">

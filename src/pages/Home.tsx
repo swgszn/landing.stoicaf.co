@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { loadStripe } from '@stripe/stripe-js';
 import {
   Menu, X, BookOpen, Smartphone, ShoppingBag,
   ArrowRight, Check, Star, Twitter, Instagram,
@@ -8,11 +9,54 @@ import {
 import Logo from '../components/Logo';
 import { useTheme } from '../hooks/useTheme';
 
+// Initialize Stripe
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || '');
+
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isCheckingOut, setIsCheckingOut] = useState(false);
   const t = useTheme();
+
+  const handleBookCheckout = async () => {
+    setIsCheckingOut(true);
+
+    const priceId = import.meta.env.VITE_STRIPE_PRICE_PAPERBACK;
+
+    if (!priceId) {
+      console.error('Stripe Price ID not configured');
+      alert('Checkout is not available yet. Please check back soon!');
+      setIsCheckingOut(false);
+      return;
+    }
+
+    try {
+      const stripe = await stripePromise;
+
+      if (!stripe) {
+        throw new Error('Stripe failed to load');
+      }
+
+      // Redirect to Stripe Checkout
+      const { error } = await stripe.redirectToCheckout({
+        lineItems: [{ price: priceId, quantity: 1 }],
+        mode: 'payment',
+        successUrl: `${window.location.origin}?checkout=success`,
+        cancelUrl: `${window.location.origin}?checkout=cancelled`,
+      });
+
+      if (error) {
+        console.error('Stripe checkout error:', error);
+        alert(error.message || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      console.error('Checkout error:', error);
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setIsCheckingOut(false);
+    }
+  };
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -382,8 +426,12 @@ export default function Home() {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-stoic-blue hover:bg-sky-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group">
-                  Pre-Order Now - $24.99
+                <button
+                  onClick={handleBookCheckout}
+                  disabled={isCheckingOut}
+                  className="bg-stoic-blue hover:bg-sky-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isCheckingOut ? 'Redirecting...' : 'Pre-Order Now - $25'}
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                 </button>
                 <button className={`border-2 ${t.colors.buttonBorder} hover:border-stoic-blue ${t.colors.buttonText} ${t.colors.buttonHoverText} px-8 py-4 rounded-lg text-lg font-bold transition-all`}>
