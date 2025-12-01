@@ -153,18 +153,19 @@ export default function Home() {
             <div className="fade-in-up order-1 lg:order-2">
               <div className={`inline-block mb-6 px-4 py-2 ${t.colors.badge} rounded-full`}>
                 <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
-                  Ancient Wisdom, Modern Application
+                  2,000-Year-Old Cheat Codes
                 </span>
               </div>
 
               <h1 className={`text-5xl md:text-7xl font-black ${t.colors.heading} tracking-tight mb-6 leading-tight`}>
-                Master Your Mind.<br />
-                <span className="text-stoic-blue">Own Your Life.</span>
+                Stop Being Soft.<br />
+                <span className="text-stoic-blue">Get Stoic AF.</span>
               </h1>
 
               <p className={`text-xl md:text-2xl ${t.colors.bodyText} mb-10 leading-relaxed`}>
-                Stoicism isn't just philosophy—it's the operating system for a meaningful life.
-                Learn to control what you can, let go of what you can't, and build unshakeable discipline.
+                Look, here's the thing—Roman emperors figured this out 2,000 years ago.
+                How to stay calm when everything's on fire. How to stop caring about things that don't matter.
+                We just translated it so you don't need a philosophy degree.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
@@ -187,26 +188,18 @@ export default function Home() {
               <div className={`mt-8 flex flex-wrap gap-6 text-sm ${t.colors.metaText}`}>
                 <div className="flex items-center gap-2">
                   <Check className="text-stoic-blue" size={20} />
-                  <span>No BS, Just Philosophy</span>
+                  <span>Zero Fluff Guarantee</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Check className="text-stoic-blue" size={20} />
-                  <span>Practical Daily Tools</span>
+                  <span>Actually Works IRL</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="text-green-600" size={20} />
-                  <span>Build Real Discipline</span>
+                  <Check className="text-stoic-blue" size={20} />
+                  <span>Become Unf*ckwithable</span>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="text-center mt-16">
-            <a href="#book" className="inline-flex flex-col items-center text-slate-400 hover:text-stoic-blue transition-colors">
-              <span className="text-xs uppercase tracking-wider mb-2">Explore</span>
-              <ChevronDown className="animate-bounce" size={24} />
-            </a>
           </div>
         </div>
       </section>
@@ -227,38 +220,39 @@ export default function Home() {
           <div className="text-center mb-12">
             <div className={`inline-block mb-4 px-4 py-2 ${t.colors.badge} rounded-full`}>
               <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
-                From The Blog
+                Free Game
               </span>
             </div>
             <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-4`}>
-              Latest Stoic <span className="text-stoic-blue">Insights</span>
+              The Blog That <span className="text-stoic-blue">Hits Different</span>
             </h2>
             <p className={`text-lg ${t.colors.metaText} max-w-2xl mx-auto`}>
-              Weekly wisdom on building discipline, conquering anxiety, and living with purpose.
+              No motivational poster nonsense. Just real talk on rewiring your brain,
+              crushing anxiety, and not being a victim of your own emotions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
             {[
               {
-                title: 'How to Think Like a Stoic in 2025',
-                excerpt: 'Ancient philosophy meets modern challenges. Learn the core principles that made Marcus Aurelius unshakeable.',
-                category: 'Philosophy',
+                title: 'Your Feelings Are Lying to You (Here\'s Proof)',
+                excerpt: 'That voice in your head? It\'s been wrong about literally everything. Here\'s how Marcus Aurelius learned to stop trusting it.',
+                category: 'Mindset',
                 readTime: '8 min',
                 date: 'Nov 20, 2025',
                 image: 'https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=800&q=80'
               },
               {
-                title: 'The Dichotomy Journal: Control What You Can',
-                excerpt: 'A daily practice to separate what you control from what you don\'t. Transform anxiety into action.',
-                category: 'Journaling',
+                title: 'The "Not My Problem" Framework',
+                excerpt: 'Most of your stress comes from things you literally cannot change. Wild concept. Let\'s talk about how to actually internalize that.',
+                category: 'Strategy',
                 readTime: '6 min',
                 date: 'Nov 18, 2025',
                 image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80'
               },
               {
-                title: 'Why Discipline Beats Motivation Every Time',
-                excerpt: 'Motivation is a lie. Discipline is freedom. Here\'s how to build systems that work when you don\'t feel like it.',
+                title: 'Motivation Is a Scam. Try This Instead.',
+                excerpt: 'Waiting until you "feel like it" is why you\'re still in the same spot. Here\'s the system that works when your brain doesn\'t want to.',
                 category: 'Discipline',
                 readTime: '10 min',
                 date: 'Nov 15, 2025',
@@ -350,27 +344,28 @@ export default function Home() {
             <div>
               <div className={`inline-block mb-4 px-4 py-2 ${t.colors.badge} rounded-full`}>
                 <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
-                  The Book
+                  The Playbook
                 </span>
               </div>
 
               <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight`}>
-                Your Playbook for <span className="text-stoic-blue">Unshakeable Calm</span>
+                Philosophy That <span className="text-stoic-blue">Actually Slaps</span>
               </h2>
 
               <p className={`text-lg ${t.colors.bodyText} mb-6 leading-relaxed`}>
-                This isn't another self-help book full of fluff. It's a no-BS guide to Stoic philosophy,
-                rewritten for the modern grind. Learn how ancient Romans conquered anxiety, built empires,
-                and died with zero regrets.
+                Real talk: most self-help books are trash. Written by people who've never struggled.
+                This one's different. It's Stoicism stripped of the academic nonsense and rebuilt
+                for people who actually want results. Marcus Aurelius ran an empire on this stuff.
+                You can probably handle your inbox.
               </p>
 
               <ul className="space-y-4 mb-8">
                 {[
-                  'Master the Dichotomy of Control',
-                  'Build Daily Discipline Systems',
-                  'Conquer Negative Emotions',
-                  '30-Day Stoic Workbook Included',
-                  'Journal Templates & Exercises'
+                  'The "What Can I Actually Control?" Protocol',
+                  'Systems That Work When You Don\'t Feel Like It',
+                  'How to Stop Taking Everything Personally',
+                  '30-Day Challenge (With Actual Accountability)',
+                  'Templates You\'ll Actually Use'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className={`${t.colors.checkIcon} rounded-full p-1 mt-1`}>
@@ -383,11 +378,11 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-stoic-blue hover:bg-sky-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group">
-                  Pre-Order Now - $24.99
+                  Grab It Now - $24.99
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                 </button>
                 <button className={`border-2 ${t.colors.buttonBorder} hover:border-stoic-blue ${t.colors.buttonText} ${t.colors.buttonHoverText} px-8 py-4 rounded-lg text-lg font-bold transition-all`}>
-                  Read Sample Chapter
+                  Read Chapter 1 Free
                 </button>
               </div>
             </div>
@@ -403,26 +398,27 @@ export default function Home() {
             <div className="order-2 lg:order-1">
               <div className={`inline-block mb-4 px-4 py-2 ${t.colors.badge} rounded-full`}>
                 <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
-                  The Journal App
+                  Your Daily Rep
                 </span>
               </div>
 
               <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight`}>
-                Your Daily <span className="text-stoic-blue">Stoic Practice</span>
+                Mental Gym <span className="text-stoic-blue">In Your Pocket</span>
               </h2>
 
               <p className={`text-lg ${t.colors.bodyText} mb-6 leading-relaxed`}>
-                Marcus Aurelius journaled daily. So should you. Our app makes it effortless with
-                guided prompts, reflection templates, and progress tracking built on Stoic principles.
+                Here's the thing nobody tells you: mental toughness is a skill. You train it.
+                Marcus Aurelius wrote in his journal every single day. This app makes that easy
+                with prompts that actually make you think, not just feel good about yourself.
               </p>
 
               <ul className="space-y-4 mb-8">
                 {[
-                  'Morning & Evening Stoic Rituals',
-                  'Dichotomy of Control Journal',
-                  'Negative Visualization Exercises',
-                  'Progress Tracking & Insights',
-                  'Customizable Templates'
+                  'Morning Primer (2 min to set your mind right)',
+                  'Evening Debrief (What went wrong? What\'s on you?)',
+                  'The "Worst Case Scenario" Tool (Sounds dark, works great)',
+                  'Streak Tracking (Because consistency wins)',
+                  'Custom Prompts (Make it yours)'
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <div className={`${t.colors.checkIcon} rounded-full p-1 mt-1`}>
@@ -436,15 +432,15 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-stoic-blue hover:bg-sky-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
                   <Smartphone size={20} />
-                  Download iOS/Android
+                  Get the App Free
                 </button>
                 <button className={`border-2 ${t.colors.buttonBorder} hover:border-stoic-blue ${t.colors.buttonText} ${t.colors.buttonHoverText} px-8 py-4 rounded-lg text-lg font-bold transition-all`}>
-                  Try Web Version
+                  Try It In Browser
                 </button>
               </div>
 
               <p className={`text-sm ${t.colors.metaText} mt-4`}>
-                Free to start. Premium features unlock deeper insights.
+                Free tier is legitimately useful. Premium just makes you a machine.
               </p>
             </div>
 
@@ -459,15 +455,15 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent flex items-end">
                   <div className="p-8 text-white w-full">
                     <Smartphone className="mb-4" size={48} />
-                    <h3 className="text-3xl font-black mb-3">Daily Stoic Journal</h3>
+                    <h3 className="text-3xl font-black mb-3">Your Daily Mental Reps</h3>
                     <div className="space-y-3 bg-white/10 backdrop-blur-md rounded-lg p-4 border border-white/20">
                       <div className="text-sm opacity-90">
-                        <div className="text-xs uppercase tracking-wider mb-1">Morning Meditation</div>
-                        <div className="font-semibold">What's in your control today?</div>
+                        <div className="text-xs uppercase tracking-wider mb-1">AM Check-In</div>
+                        <div className="font-semibold">What's actually in your control today?</div>
                       </div>
                       <div className="text-sm opacity-90">
-                        <div className="text-xs uppercase tracking-wider mb-1">Evening Reflection</div>
-                        <div className="font-semibold">What did you learn today?</div>
+                        <div className="text-xs uppercase tracking-wider mb-1">PM Reality Check</div>
+                        <div className="font-semibold">Where'd you mess up? How do you fix it?</div>
                       </div>
                     </div>
                   </div>
@@ -483,24 +479,24 @@ export default function Home() {
         <div className="max-w-7xl mx-auto text-center">
           <div className={`inline-block mb-4 px-4 py-2 ${t.colors.badge} rounded-full`}>
             <span className="text-sm font-bold text-stoic-blue uppercase tracking-wider">
-              The Gear
+              Drip With Purpose
             </span>
           </div>
 
           <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-6 leading-tight`}>
-            Wear the <span className="text-stoic-blue">Mindset</span>
+            Wear Your <span className="text-stoic-blue">Philosophy</span>
           </h2>
 
           <p className={`text-lg ${t.colors.bodyText} mb-12 max-w-2xl mx-auto`}>
-            High-quality apparel with Stoic quotes and minimalist designs.
-            Every piece is a reminder to stay disciplined, stay focused, stay Stoic AF.
+            Not your average merch. These aren't corny motivational quotes—they're conversation starters.
+            Premium quality because cheap fabric is for people who don't respect themselves.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {[
-              { name: 'Amor Fati Tee', price: '$32', desc: 'Love your fate. Premium cotton.', img: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80' },
-              { name: 'Memento Bro Hoodie', price: '$58', desc: 'Remember you will die. Heavy fleece.', img: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80' },
-              { name: 'Discipline Equals Freedom Hat', price: '$28', desc: 'Structured cap. Embroidered.', img: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80' }
+              { name: 'Amor Fati Tee', price: '$32', desc: '"Love your fate." Goes hard in any setting.', img: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80' },
+              { name: 'Memento Bro Hoodie', price: '$58', desc: 'Remember death. Look fire doing it.', img: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80' },
+              { name: 'Discipline = Freedom Hat', price: '$28', desc: 'The equation that fixes everything.', img: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=800&q=80' }
             ].map((item, i) => (
               <div key={i} className={`${t.colors.card} rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow border ${t.colors.cardBorder}`}>
                 <div className="relative h-64 overflow-hidden">
@@ -538,27 +534,27 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className={`text-4xl md:text-5xl font-black ${t.colors.heading} mb-4`}>
-              What People Are Saying
+              Don't Take Our Word For It
             </h2>
-            <p className={`text-lg ${t.colors.metaText}`}>Real reviews from real readers building real discipline</p>
+            <p className={`text-lg ${t.colors.metaText}`}>Real people who stopped making excuses and started making changes</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
                 name: 'Jake M.',
-                role: 'Entrepreneur',
-                text: 'This book changed how I handle stress. The journaling system alone is worth 10x the price. Finally feeling in control.'
+                role: 'Founder',
+                text: 'I was a mess before this. Overthinking everything. Now when stuff hits the fan, I actually have a framework. The journaling system is lowkey life-changing.'
               },
               {
                 name: 'Sarah K.',
-                role: 'Product Manager',
-                text: 'No fluff, just actionable philosophy. I use the morning ritual every day. My anxiety is down, my focus is up.'
+                role: 'PM @ Tech Co',
+                text: 'Finally, philosophy that doesn\'t feel like homework. The morning ritual takes 5 minutes and my brain is just... quieter. Less reactive. It\'s wild.'
               },
               {
                 name: 'Marcus T.',
-                role: 'Developer',
-                text: 'Best $25 I ever spent. The app keeps me consistent. The book keeps me grounded. This is the real deal.'
+                role: 'Software Dev',
+                text: 'Skeptical at first—another self-help thing, great. But the app got me hooked. 90-day streak. I\'m not the same person I was three months ago.'
               }
             ].map((testimonial, i) => (
               <div key={i} className={`${t.colors.testimonialCard} p-8 rounded-xl border-l-4 border-stoic-blue`}>
@@ -585,11 +581,11 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <Mail className="text-white mx-auto mb-6" size={64} />
           <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
-            Get Weekly Stoic Insights
+            Free Weekly Brain Gains
           </h2>
           <p className="text-xl text-sky-100 mb-10 max-w-2xl mx-auto">
-            Join 10,000+ readers getting actionable philosophy, journaling prompts,
-            and exclusive content delivered every Sunday morning.
+            Every Sunday, we send one email. No fluff, no affiliate garbage—just one idea
+            that'll make you think differently. 10K+ people are already in. You coming or what?
           </p>
 
           <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto">
@@ -607,11 +603,11 @@ export default function Home() {
                 disabled={isSubmitting}
                 className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Subscribing...' : 'Subscribe Free'}
+                {isSubmitting ? 'On it...' : 'I\'m In'}
               </button>
             </div>
             <p className="text-sm text-sky-100 mt-4">
-              No spam. Unsubscribe anytime. We respect your inbox.
+              Zero spam. One email per week. Unsubscribe whenever. No hard feelings.
             </p>
           </form>
         </div>
@@ -627,8 +623,8 @@ export default function Home() {
                 <span className="text-lg font-bold text-white">STOIC AF</span>
               </div>
               <p className="text-sm text-slate-400 max-w-md leading-relaxed mb-6">
-                Ancient wisdom for the modern grind. We translate Marcus Aurelius for the digital age,
-                helping you build resilience, discipline, and a life worth living.
+                2,000-year-old philosophy, zero academic nonsense. We took what the Roman emperors
+                knew about crushing it mentally and made it actually usable. No guru vibes here.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-slate-400 hover:text-white transition-colors">
@@ -665,7 +661,7 @@ export default function Home() {
           </div>
 
           <div className="pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
-            <p>&copy; {new Date().getFullYear()} Stoic AF. All rights reserved. Memento Bro.</p>
+            <p>&copy; {new Date().getFullYear()} Stoic AF. All rights reserved. Stay hard. Stay humble.</p>
           </div>
         </div>
       </footer>
