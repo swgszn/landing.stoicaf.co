@@ -7,11 +7,13 @@ import {
 } from 'lucide-react';
 import Logo from '../components/Logo';
 import { useTheme } from '../hooks/useTheme';
+import CheckoutModal from '../components/CheckoutModal';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
   const t = useTheme();
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
@@ -377,8 +379,11 @@ export default function Home() {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-stoic-blue hover:bg-sky-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group">
-                  Grab It Now - $24.99
+                <button
+                  onClick={() => setIsCheckoutOpen(true)}
+                  className="bg-stoic-blue hover:bg-sky-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group"
+                >
+                  Pre-Order Now - $25
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
                 </button>
                 <button className={`border-2 ${t.colors.buttonBorder} hover:border-stoic-blue ${t.colors.buttonText} ${t.colors.buttonHoverText} px-8 py-4 rounded-lg text-lg font-bold transition-all`}>
@@ -665,6 +670,12 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Checkout Modal */}
+      <CheckoutModal
+        isOpen={isCheckoutOpen}
+        onClose={() => setIsCheckoutOpen(false)}
+      />
     </div>
   );
 }
