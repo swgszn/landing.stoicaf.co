@@ -195,19 +195,11 @@ export default function Home() {
                   <span>Actually Works IRL</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check className="text-green-600" size={20} />
+                  <Check className="text-stoic-blue" size={20} />
                   <span>Become Unf*ckwithable</span>
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="text-center mt-16">
-            <a href="#book" className="inline-flex flex-col items-center text-slate-400 hover:text-stoic-blue transition-colors">
-              <span className="text-xs uppercase tracking-wider mb-2">Explore</span>
-              <ChevronDown className="animate-bounce" size={24} />
-            </a>
           </div>
         </div>
       </section>
